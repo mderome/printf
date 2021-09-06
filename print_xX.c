@@ -6,7 +6,7 @@
 /*   By: mderome <mderome@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/03 20:07:36 by mderome           #+#    #+#             */
-/*   Updated: 2021/09/03 21:22:27 by mderome          ###   ########.fr       */
+/*   Updated: 2021/09/03 22:01:46 by mderome          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,6 @@ void	ft_print_xX(char *format, char flag, va_list args, t_prc *flg)
 	unsigned int	nb;
 
 	check_flag(format, flg, flag);
-	check_width(format, flg, args);
 	nb = va_arg(args, unsigned int);
 	if (flg->wdtmn < ft_len(ft_itoa_u(nb, "0123456789abcdef")))
 		flg->wdtmn = ft_len(ft_itoa_u(nb, "0123456789abcdef"));

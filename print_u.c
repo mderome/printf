@@ -6,7 +6,7 @@
 /*   By: mderome <mderome@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/03 20:07:17 by mderome           #+#    #+#             */
-/*   Updated: 2021/09/03 21:22:21 by mderome          ###   ########.fr       */
+/*   Updated: 2021/09/03 22:00:53 by mderome          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,6 @@ void	ft_print_u(char *format, char flag, va_list args, t_prc *flg)
 	int				lengthmx;
 
 	check_flag(format, flg, flag);
-	check_width(format, flg, args);
 	nb = va_arg(args, unsigned long long int);
 	lengthmx = flg->wdtmx;
 	if (flg->wdtmn < ft_len(ft_itoa_u(nb, "0123456789")) && !flg->point)

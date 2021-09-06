@@ -6,7 +6,7 @@
 /*   By: mderome <mderome@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/03 09:27:47 by mderome           #+#    #+#             */
-/*   Updated: 2021/09/03 21:14:22 by mderome          ###   ########.fr       */
+/*   Updated: 2021/09/04 10:26:34 by mderome          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	next_flag(char *format)
 	char	flag;
 
 	i = 1;
-	flag = find_flag(format + 1);
+	flag = find_flag(format);
 	if (flag == '%')
 		return (2);
 	if (flag == 0)

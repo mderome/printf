@@ -6,7 +6,7 @@
 /*   By: mderome <mderome@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/03 18:57:28 by mderome           #+#    #+#             */
-/*   Updated: 2021/09/03 21:22:04 by mderome          ###   ########.fr       */
+/*   Updated: 2021/09/03 22:00:54 by mderome          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,6 @@ void	print_s(char *format, va_list args, t_prc *flg)
 	int		lentgh;
 
 	check_flag(format, flg, 's');
-	check_width(format, flg, args);
 	str = va_arg(args, char *);
 	lentgh = ft_len(str);
 	if (flg->point && flg->wdtmn == 0 && flg->wdtmx)

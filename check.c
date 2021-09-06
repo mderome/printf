@@ -6,7 +6,7 @@
 /*   By: mderome <mderome@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/03 19:58:34 by mderome           #+#    #+#             */
-/*   Updated: 2021/09/01 15:29:12 by mderome          ###   ########.fr       */
+/*   Updated: 2021/09/03 22:00:58 by mderome          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,48 +24,6 @@ int	ft_cmp(char *check, char c)
 		i++;
 	}
 	return (0);
-}
-
-void	check_width_atoi(char *format, t_prc *flg, va_list args)
-{
-	while (*format++ != '.')
-		if (ft_atoi_f(format))
-			flg->wdtmx = ft_atoi_f(format);
-	if (*format == '.')
-	{
-		if (flg->star)
-			flg->wdtmn = va_arg(args, int);
-		else
-			flg->wdtmn = ft_atoi_f(format + 1);
-	}
-}
-
-void	check_width(char *format, t_prc *flg, va_list args)
-{
-	if (flg->star == 2)
-	{
-		flg->wdtmx = va_arg(args, int);
-		flg->wdtmn = va_arg(args, int);
-	}
-	else
-	{	
-		while (*format && (*format < '0' || *format > '9')
-			&&*format != '*' && *format != '.')
-			format++;
-		if (*format)
-		{
-			if (*format == '*')
-			{
-				flg->wdtmx = va_arg(args, int);
-				while (*format && *format != '.')
-					format++;
-				if (ft_atoi_f(format))
-					flg->wdtmn = ft_atoi_f(format);
-			}
-			else
-				check_width_atoi(format, flg, args);
-		}
-	}
 }
 
 void	check_flag(char *format, t_prc *flg, char flag)

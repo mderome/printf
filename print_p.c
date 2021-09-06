@@ -6,7 +6,7 @@
 /*   By: mderome <mderome@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/27 13:13:35 by mderome           #+#    #+#             */
-/*   Updated: 2021/09/03 21:21:55 by mderome          ###   ########.fr       */
+/*   Updated: 2021/09/03 22:00:55 by mderome          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ void	ft_print_p(char *format, char flag, va_list args, t_prc *flg)
 	int				lentgh2;
 
 	check_flag(format, flg, flag);
-	check_width(format, flg, args);
 	addr = (long long int)va_arg(args, void *);
 	addr2 = print_hexa(addr, "0123456789abcdef");
 	lentgh = flg->wdtmx;
